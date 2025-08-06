@@ -35,6 +35,7 @@
 
 * **Script:** `inference_merging.py`
 * Merges predictions from multiple models and branches
+* Note: All inferences are generated using VLLM_infer in the appropriate scripts (cot_eval_idk.sh, jailbreak_idk.sh, judge_A_idk.sh, etc.)
 
 ### Judgement Extraction
 
