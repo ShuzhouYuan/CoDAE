@@ -22,6 +22,8 @@
   * `augment_attacks.py`: Injects emotional threats
   * `augment_attacks_idk.py`: Mixes both
 
+![CoDAE dataset summary](dataset_info.png)
+
 ### Fine-Tuning
 
 * **Script:** `finetune_model.py`
