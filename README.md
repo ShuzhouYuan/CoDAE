@@ -18,11 +18,9 @@
 * Uses `MessageAugmentor` to format prompt inputs and generate `<guidance>`-tagged responses via LLM (e.g., Qwen2.5).
 * Variants:
 
-  * `augment_idk.py`: Injects "confused user" utterances
-  * `augment_attacks.py`: Injects emotional threats
-  * `augment_attacks_idk.py`: Mixes both
-
-![CoDAE dataset summary](dataset_info.png)
+  * CoDAE I: `augment_idk.py`: Injects "confused user" utterances
+  * CoDAE A: `augment_attacks.py`: Injects emotional threats
+  * CoDAE I+A: `augment_attacks_idk.py`: Mixes both
 
 ### Fine-Tuning
 
@@ -59,6 +57,8 @@
 
 * **Script:** `stats.py`
 * Averages and standard deviations of token lengths and `<guidance>` tags
+
+![CoDAE dataset summary](dataset_info.png)
 
 ---
 
