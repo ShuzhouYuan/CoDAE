@@ -84,6 +84,8 @@ module load DeepSpeed/0.14.5-CUDA-12.1.1
 
 Create a python virtual environment with the given `requirements.txt` file and source it
 
+NOTE: .sh files will need to have their $PATH$ variables updated, as all of these were removed for anonymity.
+
 ### Fine-tuning (Gemma on threat-injected data)
 
 ```bash
