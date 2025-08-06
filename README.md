@@ -42,12 +42,12 @@
 ### Evaluation Set Construction
 
 * **Script:** `evaluation_set_constructor.py`
-* Samples from each augmentation type and adds constrained prompt headers
+* 250 samples from each augmentation type (CoTDAE, CoTDAE I, CoTDAE A, CoTDAE I+A) and adds constrained prompt headers for a 1000 sample test set
 
 ### Inference & Merging
 
 * **Script:** `inference_merging.py`
-* Merges predictions from multiple models and branches
+* Merges predictions from multiple models and branches to JSON files for judgement
 * Note: All inferences are generated using VLLM_infer in the appropriate scripts (cot_eval_idk.sh, jailbreak_idk.sh, judge_A_idk.sh, etc.)
 
 ### Judgement Extraction
@@ -59,8 +59,6 @@
 
 * **Script:** `ppl_bleu.py`
 * Perplexity (Falcon3-7B), Self-BLEU (SacreBLEU) computed per response set
-
-
 
 ---
 
@@ -89,7 +87,7 @@ module load DeepSpeed/0.14.5-CUDA-12.1.1
 
 Create a python virtual environment with the given `requirements.txt` file and source it
 
-NOTE: .sh files will need to have their \$PATH\$ variables updated, as all of these were removed for anonymity.
+NOTE: .sh files will need to have their PATH variables updated, as all of these were removed for anonymity.
 
 ### Fine-tuning (Gemma on threat-injected data)
 
