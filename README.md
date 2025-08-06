@@ -18,14 +18,26 @@
 * Uses `MessageAugmentor` to format prompt inputs and generate `<guidance>`-tagged responses via LLM (e.g., Qwen2.5).
 * Variants:
 
-  * CoDAE I: `augment_idk.py`: Injects "confused user" utterances
-  * CoDAE A: `augment_attacks.py`: Injects emotional threats
-  * CoDAE I+A: `augment_attacks_idk.py`: Mixes both
+  * **CoDAE I:** `augment_idk.py`: Injects "confused user" utterances
+  * **CoDAE A:** `augment_attacks.py`: Injects emotional threats
+  * **CoDAE I+A:** `augment_attacks_idk.py`: Mixes both
+ 
+### Dataset Statistics
+
+* **Script:** `stats.py`
+* Averages and standard deviations of token lengths and `<guidance>` tags
+
+![CoDAE dataset summary](dataset_info.png)
 
 ### Fine-Tuning
 
 * **Script:** `finetune_model.py`
 * LoRA fine-tuning on `<guidance>` spans only (via selective masking)
+
+### Output Validation
+
+* **Script:** `verify_all_files_follow_rule.py`
+* Verifies Markdown outputs follow dialogue formatting rules
 
 ### Evaluation Set Construction
 
@@ -48,17 +60,7 @@
 * **Script:** `ppl_bleu.py`
 * Perplexity (Falcon3-7B), Self-BLEU (SacreBLEU) computed per response set
 
-### Output Validation
 
-* **Script:** `verify_all_files_follow_rule.py`
-* Verifies Markdown outputs follow dialogue formatting rules
-
-### Dataset Statistics
-
-* **Script:** `stats.py`
-* Averages and standard deviations of token lengths and `<guidance>` tags
-
-![CoDAE dataset summary](dataset_info.png)
 
 ---
 
@@ -68,11 +70,11 @@
 * **Scaffolding Effectiveness** (1-5)
 * **Clarity** (1-5)
 * **Informativeness** (1-5)
-* **Accuracy** (`true` if answer given)
-* **JailbreakJudge** (safe/unsafe)
-* **RefusalJudge** (yes/no)
+* **Accuracy** (`true` if answer given -> 0-1 avg.)
+* **JailbreakJudge** (safe/unsafe -> 0-1 avg.)
+* **RefusalJudge** (yes/no -> 0-1 avg.)
 * **Perplexity** (PPL)
-* **Self-BLEU**
+* **Self-BLEU** (0-100)
 
 ---
 
@@ -87,7 +89,7 @@ module load DeepSpeed/0.14.5-CUDA-12.1.1
 
 Create a python virtual environment with the given `requirements.txt` file and source it
 
-NOTE: .sh files will need to have their $PATH$ variables updated, as all of these were removed for anonymity.
+NOTE: .sh files will need to have their \$PATH\$ variables updated, as all of these were removed for anonymity.
 
 ### Fine-tuning (Gemma on threat-injected data)
 
