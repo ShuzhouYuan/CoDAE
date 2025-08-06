@@ -1,0 +1,9 @@
+output_dir: "./outputs/checkpoints"
+batch_size: 4
+num_epochs: 3
+learning_rate: 0.00005
+deepspeed_config: "./src/configs/deepspeed_config.json"
+lora_rank: 64
+lora_alpha: 128
+lora_dropout: 0.05
+max_length: 3072
