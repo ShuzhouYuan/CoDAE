@@ -3,6 +3,7 @@
 **CoDAE** is a comprehensive pipeline for generating, augmenting, fine-tuning, and evaluating instructional language model behavior in tutoring scenarios. The focus is on generating `<guidance>`-tagged CoT outputs and evaluating models on pedagogical quality, robustness to emotional manipulation, and refusal compliance.
 
 ---
+![CoDAE Pipeline](overview_figure.png)
 
 ## 🧩 Core Components
 
