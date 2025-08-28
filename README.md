@@ -42,7 +42,7 @@
 ### Evaluation Set Construction
 
 * **Script:** `evaluation_set_constructor.py`
-* 250 samples from each augmentation type (`CoTDAE`, `CoTDAE I`, `CoTDAE A`, `CoTDAE I+A`) and adds constrained prompt headers for a 1000 sample test set
+* 250 samples from each augmentation type (`CoDAE`, `CoDAE I`, `CoDAE A`, `CoDAE I+A`) and adds constrained prompt headers for a 1000 sample test set
 
 ### Inference & Merging
 
