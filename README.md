@@ -127,5 +127,12 @@ bash jailbreak_attack.sh
 * `pandas`, `numpy`, `tqdm`
 
 ---
-
+```
+@article{yuan2025codae,
+  title={CoDAE: Adapting Large Language Models for Education via Chain-of-Thought Data Augmentation},
+  author={Yuan, Shuzhou and LaCroix, William and Ghoshal, Hardik and Nie, Ercong and F{\"a}rber, Michael},
+  journal={arXiv preprint arXiv:2508.08386},
+  year={2025}
+}
+```
 
