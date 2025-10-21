@@ -127,6 +127,10 @@ bash jailbreak_attack.sh
 * `pandas`, `numpy`, `tqdm`
 
 ---
+## 🧠 Citation
+
+Please cite this work if you use the CoDAE datasets or models in your research.
+
 ```
 @article{yuan2025codae,
   title={CoDAE: Adapting Large Language Models for Education via Chain-of-Thought Data Augmentation},
